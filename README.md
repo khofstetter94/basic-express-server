@@ -2,44 +2,39 @@
 
 ## Project: Basic Express Server
 
-### Author: Student/Group Name
+### Author: KC Hofstetter
 
 ### Problem Domain
 
-Concise Description of why this app exists
+From a business requirements standpoint, we will be building a basic Express server using best practices, including server modularization, use of middleware, and tests.
 
 ### Links and Resources
 
-- [ci/cd](http://xyz.com) (GitHub Actions)
-- [back-end server url](http://xyz.com) (when applicable)
-- [front-end application](http://xyz.com) (when applicable)
+- [ci/cd](https://github.com/khofstetter94/basic-express-server/pull/1) (GitHub Actions)
+- [back-end server url](https://kmh-basic-express-server.herokuapp.com/) (when applicable)
 
 ### Setup
 
-#### `.env` requirements (where applicable)
-
-i.e.
-
-- `PORT` - Port Number
-- `DATABASE_URL` - URL to the running Postgres instance/db
+- `PORT` - 3002
 
 #### How to initialize/run your application (where applicable)
 
-- e.g. `npm start`
-
-#### How to use your library (where applicable)
+- npm start
+- nodemon
 
 #### Features / Routes
 
-- Feature One: Details of feature
-- GET : `/hello` - specific route to hit
+- GET: /person, Query: ?name='enter name'
+- Produces an JSON object with key 'name' and value 'entered name'
 
 #### Tests
 
-- How do you run tests?
-- Any tests of note?
-- Describe any tests that you did not complete, skipped, etc
+- 404 on a bad route
+- 404 on a bad method
+- 500 if no name in the query string
+- 200 if the name is in the query string
+- given an name in the query string, the output object is correct
 
 #### UML
 
-Link to an image of the UML for your application and response to events
+![Basic Express Server - Lab 02](./img/lab-02-UML.png)
