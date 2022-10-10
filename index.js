@@ -12,6 +12,10 @@ const app = express();
 
 app.use(logger);
 
+app.get('/', (req, res, next) => {
+  res.status(200).send({status: 'ok'});
+});
+
 app.get('/person', validator, (req, res, next) => {
   let { name } = req.query;
   res.status(200).send({ name: `${name}`});
